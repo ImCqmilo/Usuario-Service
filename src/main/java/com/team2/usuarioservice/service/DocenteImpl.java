@@ -2,8 +2,10 @@ package com.team2.usuarioservice.service;
 
 import com.team2.usuarioservice.Dao.IDocenteDao;
 import com.team2.usuarioservice.entity.Docente;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class DocenteImpl implements IDocenteService{
+
     IDocenteDao docenteDao;
     @Override
     public Docente findById(Long docenteId) {
