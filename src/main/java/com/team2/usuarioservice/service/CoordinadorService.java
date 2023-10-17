@@ -43,6 +43,7 @@ public class CoordinadorService implements ICoordinadorService {
             coordinador.setApellido(Nuevo_apellido);
             coordinador.setTelefono(Nuevo_telefono);
             coordinador.setCorreo(Nuevo_correo);
+            save(coordinador);
         }
         return coordinador;
     }

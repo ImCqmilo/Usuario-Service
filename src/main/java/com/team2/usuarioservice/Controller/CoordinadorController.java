@@ -22,8 +22,5 @@ public class CoordinadorController {
         return coordinadorService.save(coordinador);
     }
 
-    @GetMapping
-    public List<Coordinador> editar() {
-        return (List<Coordinador>) coordinadorService.findAll();
-    }
+
 }
