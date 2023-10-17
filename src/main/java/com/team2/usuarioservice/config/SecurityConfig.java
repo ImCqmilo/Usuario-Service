@@ -1,4 +1,4 @@
-import com.denkitronik.auth.filter.JwtAuthFilter;
+/*import com.denkitronik.auth.filter.JwtAuthFilter;
 import com.denkitronik.auth.service.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -71,3 +71,4 @@ public class SecurityConfig {
         return config.getAuthenticationManager();
     }
 }
+*/
