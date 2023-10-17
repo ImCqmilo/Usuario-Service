@@ -10,4 +10,5 @@ public interface ICoordinadorService {
     Coordinador findById(Long id);
     Coordinador save(Coordinador coordinador);
     Coordinador editarCoordinador(Long id, Long Nuevo_coordinadorId, String Nuevo_nombre, String Nuevo_apellido, String Nuevo_telefono, String Nuevo_correo );
+    void borrarCoordinador(Long id);
 }

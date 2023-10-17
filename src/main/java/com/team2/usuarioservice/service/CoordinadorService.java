@@ -48,5 +48,10 @@ public class CoordinadorService implements ICoordinadorService {
         return coordinador;
     }
 
+    public void borrarCoordinador(Long Id){
+       CoordinadorDao.deleteById(Id);
+    }
+
+
 }
 
