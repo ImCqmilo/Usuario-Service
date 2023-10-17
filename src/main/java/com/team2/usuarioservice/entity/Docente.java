@@ -1,16 +1,14 @@
 package com.team2.usuarioservice.entity;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
+@Data
 @Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Docente")
+@Table(name = "Docentes")
 public class Docente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
