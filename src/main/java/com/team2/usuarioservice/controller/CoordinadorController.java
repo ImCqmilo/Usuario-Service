@@ -22,5 +22,12 @@ public class CoordinadorController {
         return coordinadorService.save(coordinador);
     }
 
+    @PutMapping
+        public Coordinador editarCoordinador(@PathVariable Long coordinadorId,@RequestBody Coordinador coordinador){
+          return coordinadorService.editarCoordinador(coordinadorId, coordinador);
+        }
 
+
+    @DeleteMapping
+        public void eliminarCoordinador(@PathVariable Long coordinadorId){}
 }
