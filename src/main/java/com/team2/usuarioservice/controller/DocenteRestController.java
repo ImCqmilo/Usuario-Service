@@ -5,6 +5,8 @@ import com.team2.usuarioservice.service.DocenteImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/v1/user-service")
 public class DocenteRestController {
@@ -19,5 +21,8 @@ public class DocenteRestController {
     public Docente actualizarDocente(@PathVariable Long docenteId,@RequestBody Docente docente){
         return docenteService.actualizar(docenteId, docente);
     }
+    @GetMapping("/docentes")
+    public List<Docente> listar() {return (List<Docente>)  docenteService.findAll();}
+
 
 }
