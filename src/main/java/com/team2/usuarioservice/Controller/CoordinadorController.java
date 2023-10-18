@@ -1,4 +1,4 @@
-package com.team2.usuarioservice.Controller;
+package com.team2.usuarioservice.controller;
 
 import com.team2.usuarioservice.entity.Coordinador;
 import com.team2.usuarioservice.service.CoordinadorService;
