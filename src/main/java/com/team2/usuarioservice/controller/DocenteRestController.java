@@ -28,6 +28,4 @@ public class DocenteRestController {
     public void borrarDocente(@PathVariable Long docenteId){
         docenteService.borrarDocente(docenteId);
     }
-
-
 }
