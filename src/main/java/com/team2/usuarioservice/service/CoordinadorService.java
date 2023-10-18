@@ -30,22 +30,16 @@ public class CoordinadorService implements ICoordinadorService {
     public Coordinador save(Coordinador coordinador){return CoordinadorDao.save(coordinador);}
 
 
-   public Coordinador editarCoordinador( Long id,
-                                        Long Nuevo_coordinadorId,
-                                        String Nuevo_nombre,
-                                        String Nuevo_apellido,
-                                        String Nuevo_telefono,
-                                        String Nuevo_correo){
-        Coordinador coordinador = CoordinadorDao.findById(id).get();
-        if( coordinador != null ){
-            coordinador.setCoordinadorId(Nuevo_coordinadorId);
-            coordinador.setNombre(Nuevo_nombre);
-            coordinador.setApellido(Nuevo_apellido);
-            coordinador.setTelefono(Nuevo_telefono);
-            coordinador.setCorreo(Nuevo_correo);
-            save(coordinador);
+   public Coordinador editarCoordinador( Long id, Coordinador coordinador){
+        Coordinador editarcoordinador = CoordinadorDao.findById(id).get();
+        if( editarcoordinador != null ){
+            editarcoordinador.setNombre(coordinador.getNombre());
+            editarcoordinador.setApellido(coordinador.getApellido());
+            editarcoordinador.setTelefono(coordinador.getTelefono());
+            editarcoordinador.setCorreo(coordinador.getCorreo());
+            save(editarcoordinador);
         }
-        return coordinador;
+        return CoordinadorDao.save(coordinador);
     }
 
     public void borrarCoordinador(Long Id){
