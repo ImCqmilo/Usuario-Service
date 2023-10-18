@@ -1,7 +1,7 @@
 package com.team2.usuarioservice.service;
 
 import com.team2.usuarioservice.dao.ICoordinadorDao;
-import com.team2.usuarioservice.Dao.IDocenteDao;
+import com.team2.usuarioservice.dao.IDocenteDao;
 import com.team2.usuarioservice.entity.Docente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
