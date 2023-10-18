@@ -31,15 +31,16 @@ public class CoordinadorService implements ICoordinadorService {
 
 
    public Coordinador editarCoordinador( Long id, Coordinador coordinador){
-        Coordinador editarcoordinador = CoordinadorDao.findById(id).get();
+        Coordinador editarcoordinador = CoordinadorDao.findById(id).orElse(null);
         if( editarcoordinador != null ){
             editarcoordinador.setNombre(coordinador.getNombre());
             editarcoordinador.setApellido(coordinador.getApellido());
             editarcoordinador.setTelefono(coordinador.getTelefono());
             editarcoordinador.setCorreo(coordinador.getCorreo());
-            save(editarcoordinador);
+
+            return CoordinadorDao.save(editarcoordinador);
         }
-        return CoordinadorDao.save(coordinador);
+       return null;
     }
 
     public void borrarCoordinador(Long Id){

@@ -14,20 +14,22 @@ public class CoordinadorController {
     @Autowired
     private  CoordinadorService coordinadorService;
 
-    @GetMapping
+    @GetMapping("/Coordinador")
     public List<Coordinador> listar() {return (List<Coordinador>)  coordinadorService.findAll();}
 
-    @PostMapping
+    @PostMapping("/coordinador")
     public Coordinador  Crear(@RequestBody Coordinador coordinador){
         return coordinadorService.save(coordinador);
     }
 
-    @PutMapping
+    @PutMapping("/coordinador/{coordinadorId}")
         public Coordinador editarCoordinador(@PathVariable Long coordinadorId,@RequestBody Coordinador coordinador){
           return coordinadorService.editarCoordinador(coordinadorId, coordinador);
         }
 
 
-    @DeleteMapping
-        public void eliminarCoordinador(@PathVariable Long coordinadorId){}
+    @DeleteMapping("/coordinador/{coordinadorId}")
+        public void borrarCoordinador(@PathVariable Long coordinadorId){
+        coordinadorService.borrarCoordinador(coordinadorId);
+    }
 }

@@ -15,7 +15,7 @@ public class DocenteRestController {
     public Docente crearDocente(@RequestBody Docente docente){
         return docenteService.save(docente);
     }
-    @PutMapping("/{docenteId}")
+    @PutMapping("/docente/{docenteId}")
     public Docente actualizarDocente(@PathVariable Long docenteId,@RequestBody Docente docente){
         return docenteService.actualizar(docenteId, docente);
     }

@@ -9,6 +9,6 @@ public interface ICoordinadorService {
     List<Coordinador> findAll();
     Coordinador findById(Long id);
     Coordinador save(Coordinador coordinador);
-    Coordinador editarCoordinador(Long id, Coordinador coordinador );
-    void borrarCoordinador(Long id);
+    Coordinador editarCoordinador(Long coordinadorId, Coordinador coordinador );
+    void borrarCoordinador(Long coordinadorId);
 }
