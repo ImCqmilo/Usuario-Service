@@ -1,21 +1,23 @@
 package com.team2.usuarioservice.entity;
-
 import jakarta.persistence.*;
 import lombok.*;
 
-
 @Data
-@Entity //Esto es parte de JPA que es Java Persitence API
+@Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="docentes")
-
+@Table(name = "Docentes")
 public class Docente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private Long id;
-    private String coordinador;
+    private Long docenteId;
+    private String nombre;
+    private String apellido;
+    private String telefono;
+    private String correo;
+    private String asignatura;
+    private String facultad;
 }
 

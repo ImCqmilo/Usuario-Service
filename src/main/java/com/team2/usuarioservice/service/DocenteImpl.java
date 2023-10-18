@@ -13,9 +13,16 @@ public class DocenteImpl implements IDocenteService{
 
     @Autowired
     IDocenteDao docenteDao;
+
     @Override
-    public Docente findById(Long docenteId) {
-        return docenteDao.findById(docenteId).get();
+    public List<Docente> findAll() {
+        List<Docente> docentes = (List<Docente>) docenteDao.findAll();
+        return docentes;
+    }
+
+    @Override
+    public Docente findById(Long Id) {
+        return docenteDao.findById(Id).get();
     }
 
     @Override
