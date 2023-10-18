@@ -21,4 +21,19 @@ public class DocenteImpl implements IDocenteService{
     public Docente save(Docente docente) {
         return docenteDao.save(docente);
     }
+
+    public Docente actualizar(Long docenteId, Docente docente) {
+        Docente editarDocente = docenteDao.findById(docenteId).orElse(null);
+
+        if (editarDocente != null) {
+            editarDocente.setNombre(docente.getNombre());
+            editarDocente.setApellido(docente.getApellido());
+            editarDocente.setTelefono(docente.getTelefono());
+            editarDocente.setCorreo(docente.getCorreo());
+
+            return docenteDao.save(editarDocente);
+        }
+
+        return null;
+    }
 }
