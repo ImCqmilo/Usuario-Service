@@ -1,3 +1,5 @@
+
+/*
 import com.denkitronik.auth.filter.JwtAuthFilter;
 import com.denkitronik.auth.service.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -71,3 +73,5 @@ public class SecurityConfig {
         return config.getAuthenticationManager();
     }
 }
+
+ */
