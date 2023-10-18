@@ -17,6 +17,7 @@ public class Docente {
     private String apellido;
     private String telefono;
     private String correo;
-
+    private String asignatura;
+    private String facultad;
 }
 
