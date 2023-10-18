@@ -1,7 +1,8 @@
 package com.team2.usuarioservice.controller;
 
 import com.team2.usuarioservice.entity.Docente;
-import com.team2.usuarioservice.service.DocenteService;
+import com.team2.usuarioservice.service.DocenteImpl;
+import com.team2.usuarioservice.service.IDocenteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.*;
@@ -15,7 +16,7 @@ public class DocenteRestController {
     @SpringBootApplication
     public class UsuarioServiceApplication {
         @Autowired
-        private DocenteService docenteService;
+        private DocenteImpl docenteService;
 
         @GetMapping( "/docentes")
         public List<Docente> listar(){
@@ -32,11 +33,6 @@ public class DocenteRestController {
         public Docente actualizarDocente(@RequestBody Docente docente){
             return docenteService.save(docente);
         }
-        @GetMapping("/hola/{nombre}") //La forma en la que llamo este metodo (endpoint)
-        public String holaMundo(@PathVariable("nombre") String nombre){
 
-
-            return "Hola"+nombre;
-        }
     }
 }
