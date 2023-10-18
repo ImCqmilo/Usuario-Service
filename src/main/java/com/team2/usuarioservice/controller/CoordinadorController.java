@@ -14,7 +14,7 @@ public class CoordinadorController {
     @Autowired
     private ICoordinadorService coordinadorService;
 
-    @GetMapping("/Coordinador")
+    @GetMapping("/coordinador")
     public List<Coordinador> listar() {return (List<Coordinador>)  coordinadorService.findAll();}
 
     @PostMapping("/coordinador")

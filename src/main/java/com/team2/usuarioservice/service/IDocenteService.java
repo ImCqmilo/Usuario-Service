@@ -10,4 +10,5 @@ public interface IDocenteService {
     Docente findById(Long Id);
     Docente save(Docente docente);
     Docente actualizar(Long docenteId, Docente docente);
+    void borrarDocente(Long docenteId);
 }

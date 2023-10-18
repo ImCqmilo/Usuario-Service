@@ -21,8 +21,13 @@ public class DocenteRestController {
     public Docente actualizarDocente(@PathVariable Long docenteId,@RequestBody Docente docente){
         return docenteService.actualizar(docenteId, docente);
     }
-    @GetMapping("/docentes")
+    @GetMapping("/docente")
     public List<Docente> listar() {return (List<Docente>)  docenteService.findAll();}
+
+    @DeleteMapping("/docente/{docenteId}")
+    public void borrarDocente(@PathVariable Long docenteId){
+        docenteService.borrarDocente(docenteId);
+    }
 
 
 }

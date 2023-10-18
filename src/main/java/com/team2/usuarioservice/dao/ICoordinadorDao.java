@@ -1,4 +1,4 @@
-package com.team2.usuarioservice.Dao;
+package com.team2.usuarioservice.dao;
 import com.team2.usuarioservice.entity.Coordinador;
 import org.springframework.data.repository.CrudRepository;
 
