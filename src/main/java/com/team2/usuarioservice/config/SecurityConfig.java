@@ -1,5 +1,6 @@
-import com.denkitronik.auth.filter.JwtAuthFilter;
-import com.denkitronik.auth.service.UserInfoService;
+/*
+//import com.denkitronik.auth.filter.JwtAuthFilter;
+//import com.denkitronik.auth.service.UserInfoServ
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,7 +21,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
-public class SecurityConfig {
+public class SecurityConfig{/*
 
     @Autowired
     private JwtAuthFilter authFilter; // jwt auth filter to validate the token and extract the username from the token
@@ -70,4 +71,4 @@ public class SecurityConfig {
     public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
         return config.getAuthenticationManager();
     }
-}
+}*/
